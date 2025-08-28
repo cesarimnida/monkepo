@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/top_gen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="top gen"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/type1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/bot_gen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="bot gen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/top_gen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/top_gen"
+        app:layout_constraintTop_toBottomOf="@+id/top_gen"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/type1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="type1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/top_height"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/top_gen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/type2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="type2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/type1"
+        app:layout_constraintLeft_toRightOf="@+id/top_gen"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/top_gen"
+        app:layout_constraintTop_toBottomOf="@+id/type1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/top_height"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="top height"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/top_weight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/type1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/bot_height"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="bot height"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/top_height"
+        app:layout_constraintLeft_toRightOf="@+id/type1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/type1"
+        app:layout_constraintTop_toBottomOf="@+id/top_height"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/top_weight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="top weight"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/top_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/poison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="poison"
+        app:layout_constraintBottom_toBottomOf="@+id/flying"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flying"
+        app:layout_constraintTop_toTopOf="@+id/flying" />
+
+    <CheckBox
+        android:id="@+id/ground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="ground"
+        app:layout_constraintEnd_toStartOf="@+id/fairy"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bot_gen" />
+
+    <CheckBox
+        android:id="@+id/fairy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="fairy"
+        app:layout_constraintBottom_toBottomOf="@+id/ground"
+        app:layout_constraintEnd_toStartOf="@+id/normal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ground"
+        app:layout_constraintTop_toTopOf="@+id/ground" />
+
+    <CheckBox
+        android:id="@+id/normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/fairy"
+        app:layout_constraintEnd_toStartOf="@+id/fighting"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fairy"
+        app:layout_constraintTop_toTopOf="@+id/fairy" />
+
+    <CheckBox
+        android:id="@+id/fighting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="fighting"
+        app:layout_constraintBottom_toBottomOf="@+id/normal"
+        app:layout_constraintEnd_toStartOf="@+id/flying"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/normal"
+        app:layout_constraintTop_toTopOf="@+id/normal" />
+
+    <CheckBox
+        android:id="@+id/flying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="flying"
+        app:layout_constraintBottom_toBottomOf="@+id/fighting"
+        app:layout_constraintEnd_toStartOf="@+id/poison"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fighting"
+        app:layout_constraintTop_toTopOf="@+id/fighting" />
+
+    <CheckBox
+        android:id="@+id/water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="water"
+        app:layout_constraintEnd_toStartOf="@+id/rock"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ground" />
+
+    <CheckBox
+        android:id="@+id/rock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="rock"
+        app:layout_constraintBottom_toBottomOf="@+id/water"
+        app:layout_constraintEnd_toStartOf="@+id/bug"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/water"
+        app:layout_constraintTop_toTopOf="@+id/water" />
+
+    <CheckBox
+        android:id="@+id/bug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="bug"
+        app:layout_constraintBottom_toBottomOf="@+id/rock"
+        app:layout_constraintEnd_toStartOf="@+id/ghost"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rock"
+        app:layout_constraintTop_toTopOf="@+id/rock" />
+
+    <CheckBox
+        android:id="@+id/ghost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="ghost"
+        app:layout_constraintBottom_toBottomOf="@+id/bug"
+        app:layout_constraintEnd_toStartOf="@+id/steel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bug"
+        app:layout_constraintTop_toTopOf="@+id/bug" />
+
+    <CheckBox
+        android:id="@+id/steel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="steel"
+        app:layout_constraintBottom_toBottomOf="@+id/ghost"
+        app:layout_constraintEnd_toStartOf="@+id/fire"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ghost"
+        app:layout_constraintTop_toTopOf="@+id/ghost" />
+
+    <CheckBox
+        android:id="@+id/fire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="fire"
+        app:layout_constraintBottom_toBottomOf="@+id/steel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/steel"
+        app:layout_constraintTop_toTopOf="@+id/steel" />
+
+    <CheckBox
+        android:id="@+id/dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="dark"
+        app:layout_constraintEnd_toStartOf="@+id/grass"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/water" />
+
+    <CheckBox
+        android:id="@+id/grass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="grass"
+        app:layout_constraintBottom_toBottomOf="@+id/dark"
+        app:layout_constraintEnd_toStartOf="@+id/electric"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dark"
+        app:layout_constraintTop_toTopOf="@+id/dark" />
+
+    <CheckBox
+        android:id="@+id/electric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="electric"
+        app:layout_constraintBottom_toBottomOf="@+id/grass"
+        app:layout_constraintEnd_toStartOf="@+id/psychic"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/grass"
+        app:layout_constraintTop_toTopOf="@+id/grass" />
+
+    <CheckBox
+        android:id="@+id/psychic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="psychic"
+        app:layout_constraintBottom_toBottomOf="@+id/electric"
+        app:layout_constraintEnd_toStartOf="@+id/ice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/electric"
+        app:layout_constraintTop_toTopOf="@+id/electric" />
+
+    <CheckBox
+        android:id="@+id/ice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="ice"
+        app:layout_constraintBottom_toBottomOf="@+id/psychic"
+        app:layout_constraintEnd_toStartOf="@+id/dragon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/psychic"
+        app:layout_constraintTop_toTopOf="@+id/psychic" />
+
+    <CheckBox
+        android:id="@+id/dragon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="dragon"
+        app:layout_constraintBottom_toBottomOf="@+id/ice"
+        app:layout_constraintEnd_toStartOf="@+id/electric"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ice"
+        app:layout_constraintTop_toTopOf="@+id/ice" />
+
+    <EditText
+        android:id="@+id/bot_weight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="bot weight"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/top_weight"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/top_height"
+        app:layout_constraintTop_toBottomOf="@+id/top_weight"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dark"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_pokemon" />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/gen_avg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:text="size" />
+
+    <TextView
+        android:id="@+id/gen_avg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/height_avg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/size"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:text="gen" />
+
+    <TextView
+        android:id="@+id/height_avg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/weight_avg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/gen_avg"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:text="height" />
+
+    <TextView
+        android:id="@+id/weight_avg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/best_choice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/height_avg"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:text="weight" />
+
+    <TextView
+        android:id="@+id/best_choice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/weight_avg"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:text="best" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/size"
+        tools:listitem="@layout/item_pokemon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
